@@ -62,14 +62,14 @@ function ParseText(text) {
   let boldActive = 0
   const colourStack = []
   const chars = text.split("")
-  const tagRegex = new RegExp(/^\[((\/?B|\/?U|\/C)|(C:#\w{6}))\]/)
+  const tagRegex = new RegExp(/^\[((\/?B|\/?U|\/C)|(C:#\w{6}))\]/i)
   
   let i = 0
   while (i < chars.length) {
     const r = tagRegex.exec(chars.slice(i).join(''))
     const char = chars[i]
     if (r){
-      switch(r[0]) {
+      switch(r[0].toUpperCase()) {
         case '[B]':
           boldActive += 1
           chars.splice(i,3)

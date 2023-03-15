@@ -21,7 +21,6 @@ function App() {
         speed: speedValue?+speedValue:defValue.speed,
         width: widthValue?+widthValue:defValue.width
       })
-      setTextValue('')
     }
   }
 
