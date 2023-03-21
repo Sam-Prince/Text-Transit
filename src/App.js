@@ -1,17 +1,16 @@
-import './App.css';
+import './index.css';
 import { useState } from "react";
 import Scroller from "./Scroller"
 
 function App() {
-  const [textValue, setTextValue] = useState("")
-  const [speedValue, setSpeedValue] = useState("")
-  const [widthValue, setWidthValue] = useState("")
-
   const defValue = {
     text: "[C:#FF0000]All of this text is Red, but [C:#0000FF][B][U]THIS[/U][/B] text is Blue.[/C][/C]",
     speed: 5,
     width: 20
   }
+  const [textValue, setTextValue] = useState("")
+  const [speedValue, setSpeedValue] = useState("")
+  const [widthValue, setWidthValue] = useState("")
   const [output, setOutput] = useState(defValue)
   
   const handleKeyDown = (event) => {
